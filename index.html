@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+
+        <nav class="navbar">
+            <div class="logo">
+            <a href="index.html" class="logo-link"> 
+                <img class="img-logo" alt="logo" src="images/icons/logo.png">
+                <h1> BRATA</h1>
+            </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link hover-blue">Find a Job</a></li>
+                <li><a href="#" class="nav-link hover-blue">Find a Freelancer</a></li>
+                <li><a href="#" class="nav-link hover-blue">About</a></li>
+            </ul>
+
+            <div class="log-sign">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>    
+            </div>
+
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
+                <svg class="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+        </nav>
+
+        <!-- Mobile dropdown menu -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <ul class="mobile-nav">
+                <li><a href="#" class="mobile-link">Find a Job</a></li>
+                <li><a href="#" class="mobile-link">Find a Freelancer</a></li>
+                <li><a href="#" class="mobile-link">About</a></li>
+                <li><a href="login.html" class="mobile-link">Login</a></li>
+                <li><a href="signup.html" class="mobile-signup-btn">Sign Up</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-container">
+        <div class="text-content">
+            <p class="hero-title">
+                Showcase <span class="highlight">Your Talent.</span><br />
+                Get <span class="highlight">Hired.</span><br />
+                Build <span class="highlight">Your Future.</span>
+            </p>
+        </div>
+        <div class="image-container">
+        <!-- Female pic -->
+        <img class="hero-image" alt="Hero" src="images/homepage/hero.png"/>
+        </div>
+    </section>
+
+    <!-- Start Your Freelancing Section -->
+
+    <section class="freelancing-section">
+        <h2 class="freelancing-title">Start Your Freelancing Journey Today!</h2>
+        <p class="freelancing-description">
+            Whether you're a designer, writer, programmer, or just exploring, our platform is built for students like you. No
+            need to compete with experts&mdash;we've created a space where you can grow, gain experience, and get paid for doing
+            what you love.
+        </p>  
+    </section>
+
+    <!-- Why Hire Section -->
+
+    <section class="hire-section">
+        <h2 class="hire-title">Why Hire a Student Freelancer </h2>
+
+        <div class="hire-reasons-wrapper">
+            <div class="reasons-group">
+                <p class="hire-reasons">Innovative Ideas </p>
+                <p class="hire-reasons">Passion &amp; Drive</p>
+            </div>
+            
+            <div class="hire-img-container">
+                <!-- Male character SVG -->
+                <img class="hire-image" alt="Why Hire a Freelancer" src="images/homepage/hire.png"/>
+            </div>
+
+            <div class="reasons-group">
+                <p class="hire-reasons">Affordability Meets Quality</p>
+                <p class="hire-reasons">Fast Learners</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+
+    <section class="registration-section">
+        <div class="card">
+            <img src="images/homepage/for fre.jpg" alt="Register as Freelancer" class="card-image" />
+            <div class="card-overlay">
+                <h4 class="card-title">Start your freelance journey today and gain real-world experience!</h4>
+                <a href="signup.html" class="register-button">Register now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/homepage/for emp.jpg" alt="Register as Employer" class="card-image" />
+            <div class="card-overlay">
+                <h4 class="card-title">Discover talented student freelancers, ready to bring your ideas to life!</h4>
+                <a href="signup.html" class="register-button">Register now</a>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+        <div class="logo">
+            <img class="footer-img-logo" src="images/icons/logo2.png"/>
+            <p class="logo-text">BRATA</p>
+        </div>
+        </div>
+        <div class="footer-links">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="footer-list">
+            <li><a href="#" class="footer-link">Home</a></li>
+            <li><a href="#" class="footer-link">About Us</a></li>
+        </ul>
+        </div>
+        <div class="footer-links">
+        <h5 class="footer-title">For Freelancers</h5>
+        <ul class="footer-list">
+            <li><a href="#" class="footer-link">Freelancing Tips</a></li>
+            <li><a href="#" class="footer-link">Student Benefits</a></li>
+        </ul>
+        </div>
+        <div class="footer-links">
+        <h5 class="footer-title">Support</h5>
+        <ul class="footer-list">
+            <li><a href="#" class="footer-link">Privacy & Policy</a></li>
+            <li><a href="#" class="footer-link">Terms & Condition</a></li>
+        </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2024 OBARATA. All rights reserved.
+    </div>
+    </footer>
+
+
+    
+    <script src="mobileMenu.js"></script>
+</body>
+</html>

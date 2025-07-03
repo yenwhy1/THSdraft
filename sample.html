@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Country → State → City Dropdown</title>
+</head>
+<body>
+  <h2>Select Location</h2>
+
+  <label for="countrySelect">Country:</label>
+  <select id="countrySelect">
+    <option>Loading countries...</option>
+  </select>
+  <br><br>
+
+  <label for="stateSelect">State:</label>
+  <select id="stateSelect" disabled>
+    <option>Select a country first</option>
+  </select>
+  <br><br>
+
+  <label for="citySelect">City:</label>
+  <select id="citySelect" disabled>
+    <option>Select a state first</option>
+  </select>
+
+  <script>
+    const API_KEY = "U0kwMktEZlp0TU9uVDVPVjNRYTJ6R2JVZEI2c1Y2a3N5RkViSGlSYw==";
+    const headers = new Headers({ "X-CSCAPI-KEY": "U0kwMktEZlp0TU9uVDVPVjNRYTJ6R2JVZEI2c1Y2a3N5RkViSGlSYw==" });
+    const requestOptions = { method: 'GET', headers: headers, redirect: 'follow' };
+
+    const countrySelect = document.getElementById("countrySelect");
+    const stateSelect = document.getElementById("stateSelect");
+    const citySelect = document.getElementById("citySelect");
+
+    // Load countries
+    fetch("https://api.countrystatecity.in/v1/countries", requestOptions)
+      .then(res => res.json())
+      .then(countries => {
+        countrySelect.innerHTML = `<option value="">--Select Country--</option>`;
+        countries.forEach(country => {
+          const option = document.createElement("option");
+          option.value = country.iso2;
+          option.textContent = country.name;
+          countrySelect.appendChild(option);
+        });
+        countrySelect.disabled = false;
+      });
+
+    // Load states when country changes
+    countrySelect.addEventListener("change", () => {
+      const countryCode = countrySelect.value;
+      stateSelect.innerHTML = `<option>Loading states...</option>`;
+      citySelect.innerHTML = `<option>Select a state first</option>`;
+      citySelect.disabled = true;
+
+      if (!countryCode) {
+        stateSelect.innerHTML = `<option>Select a country first</option>`;
+        stateSelect.disabled = true;
+        return;
+      }
+
+      fetch(`https://api.countrystatecity.in/v1/countries/${countryCode}/states`, requestOptions)
+        .then(res => res.json())
+        .then(states => {
+          stateSelect.innerHTML = `<option value="">--Select State--</option>`;
+          states.forEach(state => {
+            const option = document.createElement("option");
+            option.value = state.iso2;
+            option.textContent = state.name;
+            stateSelect.appendChild(option);
+          });
+          stateSelect.disabled = false;
+        });
+    });
+
+    // Load cities when state changes
+    stateSelect.addEventListener("change", () => {
+      const countryCode = countrySelect.value;
+      const stateCode = stateSelect.value;
+      citySelect.innerHTML = `<option>Loading cities...</option>`;
+
+      if (!stateCode) {
+        citySelect.innerHTML = `<option>Select a state first</option>`;
+        citySelect.disabled = true;
+        return;
+      }
+
+      fetch(`https://api.countrystatecity.in/v1/countries/[ciso]/states/[siso]/cities`, requestOptions)
+        .then(res => res.json())
+        .then(cities => {
+          citySelect.innerHTML = `<option value="">--Select City--</option>`;
+          cities.forEach(city => {
+            const option = document.createElement("option");
+            option.value = city.id;
+            option.textContent = city.name;
+            citySelect.appendChild(option);
+          });
+          citySelect.disabled = false;
+        });
+    });
+  </script>
+</body>
+</html>

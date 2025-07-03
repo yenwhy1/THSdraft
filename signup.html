@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <nav class="navbar">
+            <div class="logo">
+            <a href="index.html" class="logo-link"> 
+                <img class="img-logo" alt="logo" src="images/icons/logo.png">
+                <h1> BRATA</h1>
+            </a>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="signup-container">
+        <p class="signup-container__description">
+            Awesome! Let’s build your profile so you can start getting matched with freelance opportunities.
+        </p>
+        <form class="signup-form">
+            <div class="signup-form__group">
+                <label for="first-name" class="signup-form__label">First Name</label>
+                <input type="text" id="first-name" class="signup-form__input" required>
+            </div>
+            <div class="signup-form__group">
+                <label for="middle-name" class="signup-form__label">Middle Name (optional)</label>
+                <input type="text" id="middle-name" class="signup-form__input">
+            </div>
+            <div class="signup-form__group">
+                <label for="last-name" class="signup-form__label">Last Name</label>
+                <input type="text" id="last-name" class="signup-form__input" required>
+            </div>
+            <div class="signup-form__group">
+                <label for="birth-date" class="signup-form__label">Birth of Date</label>
+                <input type="date" id="birth-date" class="signup-form__input" required>
+            </div>
+                        <!-- Country Field -->
+            <div class="signup-form__group">
+                <label for="country" class="signup-form__label">Country</label>
+                <select id="country" class="signup-form__input" required>
+                    <option value="">Select Country</option>
+                </select>
+            </div>
+
+            <!-- Province/State Field -->
+            <div class="signup-form__group">
+                <label for="province" class="signup-form__label">Province/State</label>
+                <select id="province" class="signup-form__input" required disabled>
+                    <option value="">Select Province</option>
+                </select>
+            </div>
+
+            <!-- City Field -->
+            <div class="signup-form__group">
+                <label for="city" class="signup-form__label">City</label>
+                <select id="city" class="signup-form__input" required disabled>
+                    <option value="">Select City</option>
+                </select>
+            </div>
+            <!-- Barangay Field -->
+            <div class="signup-form__group">
+                <label for="barangay" class="signup-form__label">Barangay</label>
+                <select id="barangay" class="signup-form__input" required disabled>
+                    <option value="">Select Barangay</option>
+                </select>
+            </div>
+
+            <div class="signup-form__group">
+                <label for="phone-number" class="signup-form__label">Phone Number</label>
+                <input type="tel" id="phone-number" class="signup-form__input" required>
+            </div>
+
+            
+            
+        </form>
+        <div class="signup-container__actions">
+            <a href="#" class="signup-container__back-link">&lt; Back</a>
+            <a href="signuptwo.html"> <button type="submit" class="signup-container__button">Next</button> </a>
+        </div>
+    </div>
+
+    <script src="autocompAddress.js"></script>
+    
+</body>
+</html>

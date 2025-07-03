@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <nav class="navbar">
+            <div class="logo">
+            <a href="index.html" class="logo-link"> 
+                <img class="img-logo" alt="logo" src="images/icons/logo.png">
+                <h1> BRATA</h1>
+            </a>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="skills-container">
+    <p class="skills-description">
+        Choose your skills to customize your experience and get matched with the best opportunities just for you!
+    </p>
+    <div class="skills-selection">
+        <!-- Category Selection (Left Side) -->
+        <div class="category-selection">
+            <label for="category" class="category-label">
+                Select 1 category
+            </label>
+            <div class="category-list">
+                <div class="category-item" data-category="webdev">Web Development</div>
+                <div class="category-item" data-category="mobileapp">Mobile App Development</div>
+                <div class="category-item" data-category="software">Software Engineering</div>
+                <div class="category-item" data-category="data">Data Science & Analytics</div>
+                <div class="category-item" data-category="cybersecurity">Cybersecurity</div>
+                <div class="category-item" data-category="cloud">Cloud Computing</div>
+                <div class="category-item" data-category="ai">Artificial Intelligence & Machine Learning</div>
+                <div class="category-item" data-category="database">Database Management</div>
+            </div>
+        </div>
+
+        <!-- Specialties Selection (Right Side) -->
+        <div class="specialties-selection">
+            <label for="specialties" class="specialties-label">
+                Now, select 1 to 3 specialties
+            </label>
+            <div class="specialties-list" id="specialties-list">
+                <!-- Specialties will be dynamically added here based on category selection -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <a href="signuptwo.html" class="back-button"> &lt; Back</a>
+        <a href="fre-home.html" class="next-button">Next</a>
+    </div>
+    </div>
+
+    <script src="skillsSelection.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <nav class="navbar">
+            <div class="logo">
+            <a href="index.html" class="logo-link"> 
+                <img class="img-logo" alt="logo" src="images/icons/logo.png">
+                <h1> BRATA</h1>
+            </a>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="signup2-container">
+        <p class="signup2-container__description">
+        Awesome! Let’s build your profile so you can start getting matched with freelance opportunities.
+        </p>
+
+    <div class="signupp2-body">
+        <!-- Avatar and Upload Button -->
+        <div class="signupp2-left">
+        <!-- Avatar Placeholder -->
+         <div id="signupp2AvatarPlaceholder" class="signupp2-avatar">+</div>
+         <!-- Image Preview (hidden at first) -->
+          <img id="signupp2Preview" class="signupp2-avatar signupp2-avatar--image hidden" src="" alt="Profile Preview">
+          <input type="file" id="signupp2FileInput" accept="image/*" class="hidden">
+          <button type="button" class="signupp2-upload-btn" onclick="document.getElementById('signupp2FileInput').click();">
+            Upload your photo</button>
+        </div>
+
+
+        <!-- Form Section -->
+        <form class="signupp2-form">
+            <div class="signupp2-field">
+                <label class="signupp2-label" for="email">Email Address</label>
+                <div class="signupp2-input-group">
+                    <input type="email" id="email" class="signupp2-input" placeholder="Enter your email address" required>
+                    <button type="button" class="signupp2-verify-btn">Verify</button>
+                </div>
+            </div>
+            <div class="signupp2-field">
+                <label class="signupp2-label" for="password">Set your password</label>
+                <div class="password-wrapper2"> 
+                    <input type="password" id="password" class="signupp2-input" placeholder="Enter your password" required>
+                    <img src="images/icons/visibility.png" id="togglePassword" class="toggle-password-btn2" alt="Toggle Password" />
+                </div>
+                
+            </div>
+            <div class="signupp2-field">
+                <label class="signupp2-label" for="confirm-password">Re-type your password</label>
+                <div class="password-wrapper2">
+                    <input type="password" id="confirm-password" class="signupp2-input" placeholder="Confirm your password" required>
+                    <img src="images/icons/visibility.png" id="togglePassword" class="toggle-password-btn2" alt="Toggle Password" />
+                </div>
+            </div>
+        </form>
+        
+    </div>
+    <div class="signup2-container__actions">
+                <a href="signup.html" class="signup2-container__back-link">&lt; Back</a>
+                <a href="signupskills.html"> <button type="submit" class="signup2-container__button">Next</button> </a>
+            </div>
+    </div>
+
+
+    <script src="uploadProfile.js"></script>
+    <script src="passwordToggle.js"></script>
+</body>
+</html>

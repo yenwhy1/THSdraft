@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <nav class="navbar">
+            <div class="logo">
+            <a href="index.html" class="logo-link"> 
+                <img class="img-logo" alt="logo" src="images/icons/logo.png">
+                <h1> BRATA</h1>
+            </a>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="login-container">
+        <div class="login-form">
+            <h2 class="title">Welcome back!</h2>
+            <p class="description">Let's get you logged in to continue where you left off.</p>
+            <form>
+                <div class="input-group">
+                    <label for="email" class="label">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email address" class="input-field">
+                </div>
+                <div class="input-group">
+                    <label for="password" class="label">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" placeholder="Enter your password" class="input-field">
+                            <img src="images/icons/visibility.png" id="togglePassword" class="toggle-password-btn" alt="Toggle Password" />
+                    </div>
+                </div>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+                <button type="submit" class="submit-btn">Login</button>
+
+                <p class="switch-signup">Don't have an account? <a href="signup.html" class="go-to-signup">Signup</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="passwordToggle.js"></script>
+</body>
+</html>
